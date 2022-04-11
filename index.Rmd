@@ -1,0 +1,110 @@
+---
+title       : Reproducible Pitch
+subtitle    : Production for Coursera assignement (Course 9 - Week 4)
+author      : Idriss . S
+job         : 
+framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
+revealjs    : {theme: moon, transition: cube}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+ext_widgets : {rCharts: [libraries/nvd3]}
+---
+
+</br></br></br>
+
+# Reproducible Pitch
+## Production for Coursera assignement (Course 9 - Week 4)
+#### Author : Idriss .S
+#### Date : 12 april 2022
+
+--- &vertical
+
+### Introduction
+
+This presentation aims to study a data set from R : `ToothGrowth`.
+
+It's cover :
+
+1. only data exploration (due to the limitation of 5 slides) ;
+
+</br>
+
+This work could be completed (of more slides are allowed) by :
+
+2. fitting model responding to the question that try to explain the relationship 
+between miles per gallon consmption and weight for each car.
+3. discussions
+
+</br>
+
+### Exploratory data analysis
+
+#### Data structure
+
+```{r} 
+data(ToothGrowth)
+str(ToothGrowth)
+```
+
+***
+
+#### Data structure - 2
+```{r mesage=F}
+library(tidyr)
+library(rstatix)
+ToothGrowth %>% sample_n_by(dose, size = 3)
+# Quick summary of the data
+summary(ToothGrowth)
+# Exploration of ToothGrowth$dose and ToothGrowth$len, since we know exactly what ToothGrowth$supp contains
+unique(ToothGrowth$dose)
+unique(ToothGrowth$len)
+```
+
+***
+
+#### Box plot - code
+
+
+```{r plot_1}
+library(ggplot2)
+my_plot_fun <- function(my_data,my_x) {
+  my_data <- as.data.frame(my_data)
+  my_data %>%
+  ggplot(aes(x=my_x, y=len)) +
+theme(plot.title = element_text(color="#ADA717", size=18, face="bold.italic",hjust=0.5),
+ axis.title.x = element_text(color="#993333", size=18, face="bold"),
+ axis.text.x = element_text(color="#993333", size=14,vjust = 0),
+ axis.title.y = element_text(color="darkgreen", size=18, face="bold"),
+ axis.text.y = element_text(face="bold", color="darkgreen", size=14),
+ legend.text = element_text(size=12),
+ legend.title = element_text(size=16))}
+
+# Conversion of ToothGrowth$dose into a factor
+ToothGrowth$dose<-as.factor(ToothGrowth$dose)
+
+mpt <-my_plot_fun(ToothGrowth,my_x = ToothGrowth$dose) + 
+  geom_boxplot(aes(color = supp,group=dose), width = 0.6) +
+  geom_dotplot(aes(fill = as.factor(dose), color = supp,group=dose), binaxis='y', stackdir='center', 
+               dotsize = 0.8,position = position_dodge(0.8),binwidth=1)+
+  scale_fill_manual( values = c("#00AFBB", "#E3B166","#A1A861"))+
+  scale_color_manual(values = c("red", "black")) + facet_grid(~ supp)+
+  labs(x = "Doses", y ="Toothe Length", fill = "Doses", color="Supplement delivery",
+    title = "Tooth length \n by dose amount",
+  caption = "Plot tooth length ('len') by the dose amount ('dose'), \n grouped by supplement delivery method ('supp')") +
+  theme(plot.caption = element_text(color = "darkblue", face = "italic", size = 12))
+```
+
+***
+#### Box plot - plot
+
+```{r fig.width=15}
+mpt
+```
+
+</br>
+
+#### Thanks for watching. Regards.
+##### Idriss .S
