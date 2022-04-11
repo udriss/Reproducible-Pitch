@@ -1,0 +1,21 @@
+
+.ninety {
+  font-size: 0.2em;
+   }
+   
+p li {
+  font-size: 10px;
+}
+
+.stack .present {
+  text-align: left;
+  font: italic 1em "Fira Sans", serif;
+  color :white;
+}
+
+.reveal section img {
+  display: block;
+  left :0;
+  right: 0;
+  margin:auto;
+}
