@@ -1,27 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Reproducible Pitch</title>
-  <meta name="description" content="">
-  <meta name="author" content="Idriss . S">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
-  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/moon.css" id="theme">
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
-  <!--[if lt IE 9]>
-  <script src="lib/js/html5shiv.js"></script>
-  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
-<link rel="stylesheet" href = "assets/css/style.css">
+---
+title       : Reproducible Pitch
+subtitle    : Production for Coursera assignement (Course 9 - Week 4)
+author      : Idriss . S
+job         : 
+framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
+revealjs    : {theme: moon, transition: cube}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+ext_widgets : {rCharts: [libraries/nvd3]}
+---
 
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section class='' data-state='' id='slide-1'>
-  
-  <style>
+
+<style>
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /**
  * Solarized Dark theme for reveal.js.
@@ -1357,49 +1350,49 @@ p li {
   margin:auto;
 }
 /* Tomorrow Theme */
-    /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-    /* Original theme - https://github.com/chriskempson/tomorrow-theme */
-    /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-    .tomorrow-comment, pre .comment, pre .title {
-        color: #8e908c;
-    }
+	/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+	/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+	/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+	.tomorrow-comment, pre .comment, pre .title {
+		color: #8e908c;
+	}
 
 .tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
-    color: #c82829;
+	color: #c82829;
 }
 
 .tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
-    color: #f5871f;
+	color: #f5871f;
 }
 
 .tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
-    color: #eab700;
+	color: #eab700;
 }
 
 .tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
-    color: #718c00;
+	color: #718c00;
 }
 
 .tomorrow-aqua, pre .css .hexcolor {
-    color: #3e999f;
+	color: #3e999f;
 }
 
 .tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
-    color: #4271ae;
+	color: #4271ae;
 }
 
 .tomorrow-purple, pre .keyword, pre .javascript .function {
-    color: #8959a8;
+	color: #8959a8;
 }
 
 pre code {
-    display: block;
-    background: white;
-    color: #4d4d4c;
-        font-family: Menlo, Monaco, Consolas, monospace;
-    line-height: 1.5;
-    border: 1px solid #ccc;
-    padding: 10px;
+	display: block;
+	background: white;
+	color: #4d4d4c;
+		font-family: Menlo, Monaco, Consolas, monospace;
+	line-height: 1.5;
+	border: 1px solid #ccc;
+	padding: 10px;
 }
 /* latin-ext */
 @font-face {
@@ -1469,71 +1462,64 @@ pre code {
 
 </style>
 
-<p></br></br></br></p>
+</br></br></br>
 
-<h1>Reproducible Pitch</h1>
+# Reproducible Pitch
+## Production for Coursera assignement (Course 9 - Week 4)
+#### Author : Idriss .S
+#### Date : 12 april 2022
 
-<h2>Production for Coursera assignement (Course 9 - Week 4)</h2>
+--- &vertical
 
-<h4>Author : Idriss .S</h4>
+### Introduction
 
-<h4>Date : 12 april 2022</h4>
+This presentation aims to study a data set from R : `ToothGrowth`.
 
-  
-</section>
-<section>
-   <section class='' data-state=''>
-    <h3>Introduction</h3>
-    <p>This presentation aims to study a data set from R : <code>ToothGrowth</code>.</p>
+It's cover :
 
-<p>It&#39;s cover :</p>
+1. only data exploration (due to the limitation of 5 slides) ;
 
-<ol>
-<li>only data exploration (due to the limitation of 5 slides) ;</li>
-</ol>
+</br>
 
-<p></br></p>
+This work could be completed (of more slides are allowed) by :
 
-<p>This work could be completed (of more slides are allowed) by :</p>
+2. fitting model responding to the question that try to explain the relationship 
+between miles per gallon consmption and weight for each car.
+3. discussions
 
-<ol>
-<li>fitting model responding to the question that try to explain the relationship 
-between miles per gallon consmption and weight for each car.</li>
-<li>discussions</li>
-</ol>
+</br>
 
-<p></br></p>
+### Exploratory data analysis
 
-<h3>Exploratory data analysis</h3>
+#### Data structure
 
-<h4>Data structure</h4>
 
-<pre><code class="r">data(ToothGrowth)
+```r
+data(ToothGrowth)
 str(ToothGrowth)
-</code></pre>
+```
 
-<pre><code>## &#39;data.frame&#39;:    60 obs. of  3 variables:
+```
+## 'data.frame':	60 obs. of  3 variables:
 ##  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
-##  $ supp: Factor w/ 2 levels &quot;OJ&quot;,&quot;VC&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
 ##  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
-</code></pre>
+```
 
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   
-   <section class='' data-state=''>
-    <h4>Data structure - 2</h4>
+***
 
-<pre><code class="r">library(tidyr)
+#### Data structure - 2
+
+```r
+library(tidyr)
 library(rstatix)
-ToothGrowth %&gt;% sample_n_by(dose, size = 3)
-</code></pre>
+ToothGrowth %>% sample_n_by(dose, size = 3)
+```
 
-<pre><code>## # A tibble: 9 × 3
+```
+## # A tibble: 9 × 3
 ##     len supp   dose
-##   &lt;dbl&gt; &lt;fct&gt; &lt;dbl&gt;
+##   <dbl> <fct> <dbl>
 ## 1  14.5 OJ      0.5
 ## 2   4.2 VC      0.5
 ## 3   7.3 VC      0.5
@@ -1543,129 +1529,88 @@ ToothGrowth %&gt;% sample_n_by(dose, size = 3)
 ## 7  27.3 OJ      2  
 ## 8  26.4 OJ      2  
 ## 9  33.9 VC      2
-</code></pre>
+```
 
-<pre><code class="r"># Quick summary of the data
+```r
+# Quick summary of the data
 summary(ToothGrowth)
-</code></pre>
+```
 
-<pre><code>##       len        supp         dose      
+```
+##       len        supp         dose      
 ##  Min.   : 4.20   OJ:30   Min.   :0.500  
 ##  1st Qu.:13.07   VC:30   1st Qu.:0.500  
 ##  Median :19.25           Median :1.000  
 ##  Mean   :18.81           Mean   :1.167  
 ##  3rd Qu.:25.27           3rd Qu.:2.000  
 ##  Max.   :33.90           Max.   :2.000
-</code></pre>
+```
 
-<pre><code class="r"># Exploration of ToothGrowth$dose and ToothGrowth$len, since we know exactly what ToothGrowth$supp contains
+```r
+# Exploration of ToothGrowth$dose and ToothGrowth$len, since we know exactly what ToothGrowth$supp contains
 unique(ToothGrowth$dose)
-</code></pre>
+```
 
-<pre><code>## [1] 0.5 1.0 2.0
-</code></pre>
+```
+## [1] 0.5 1.0 2.0
+```
 
-<pre><code class="r">unique(ToothGrowth$len)
-</code></pre>
+```r
+unique(ToothGrowth$len)
+```
 
-<pre><code>##  [1]  4.2 11.5  7.3  5.8  6.4 10.0 11.2  5.2  7.0 16.5 15.2 17.3 22.5 13.6 14.5
+```
+##  [1]  4.2 11.5  7.3  5.8  6.4 10.0 11.2  5.2  7.0 16.5 15.2 17.3 22.5 13.6 14.5
 ## [16] 18.8 15.5 23.6 18.5 33.9 25.5 26.4 32.5 26.7 21.5 23.3 29.5 17.6  9.7  8.2
 ## [31]  9.4 19.7 20.0 25.2 25.8 21.2 27.3 22.4 24.5 24.8 30.9 29.4 23.0
-</code></pre>
+```
 
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   
-   <section class='' data-state=''>
-    <h4>Box plot - code</h4>
+***
 
-<pre><code class="r">library(ggplot2)
-my_plot_fun &lt;- function(my_data,my_x) {
-  my_data &lt;- as.data.frame(my_data)
-  my_data %&gt;%
+#### Box plot - code
+
+
+
+```r
+library(ggplot2)
+my_plot_fun <- function(my_data,my_x) {
+  my_data <- as.data.frame(my_data)
+  my_data %>%
   ggplot(aes(x=my_x, y=len)) +
-theme(plot.title = element_text(color=&quot;#ADA717&quot;, size=18, face=&quot;bold.italic&quot;,hjust=0.5),
- axis.title.x = element_text(color=&quot;#993333&quot;, size=18, face=&quot;bold&quot;),
- axis.text.x = element_text(color=&quot;#993333&quot;, size=14,vjust = 0),
- axis.title.y = element_text(color=&quot;darkgreen&quot;, size=18, face=&quot;bold&quot;),
- axis.text.y = element_text(face=&quot;bold&quot;, color=&quot;darkgreen&quot;, size=14),
+theme(plot.title = element_text(color="#ADA717", size=18, face="bold.italic",hjust=0.5),
+ axis.title.x = element_text(color="#993333", size=18, face="bold"),
+ axis.text.x = element_text(color="#993333", size=14,vjust = 0),
+ axis.title.y = element_text(color="darkgreen", size=18, face="bold"),
+ axis.text.y = element_text(face="bold", color="darkgreen", size=14),
  legend.text = element_text(size=12),
  legend.title = element_text(size=16))}
 
 # Conversion of ToothGrowth$dose into a factor
-ToothGrowth$dose&lt;-as.factor(ToothGrowth$dose)
+ToothGrowth$dose<-as.factor(ToothGrowth$dose)
 
-mpt &lt;-my_plot_fun(ToothGrowth,my_x = ToothGrowth$dose) + 
+mpt <-my_plot_fun(ToothGrowth,my_x = ToothGrowth$dose) + 
   geom_boxplot(aes(color = supp,group=dose), width = 0.6) +
-  geom_dotplot(aes(fill = as.factor(dose), color = supp,group=dose), binaxis=&#39;y&#39;, stackdir=&#39;center&#39;, 
+  geom_dotplot(aes(fill = as.factor(dose), color = supp,group=dose), binaxis='y', stackdir='center', 
                dotsize = 0.8,position = position_dodge(0.8),binwidth=1)+
-  scale_fill_manual( values = c(&quot;#00AFBB&quot;, &quot;#E3B166&quot;,&quot;#A1A861&quot;))+
-  scale_color_manual(values = c(&quot;red&quot;, &quot;black&quot;)) + facet_grid(~ supp)+
-  labs(x = &quot;Doses&quot;, y =&quot;Toothe Length&quot;, fill = &quot;Doses&quot;, color=&quot;Supplement delivery&quot;,
-    title = &quot;Tooth length \n by dose amount&quot;,
-  caption = &quot;Plot tooth length (&#39;len&#39;) by the dose amount (&#39;dose&#39;), \n grouped by supplement delivery method (&#39;supp&#39;)&quot;) +
-  theme(plot.caption = element_text(color = &quot;darkblue&quot;, face = &quot;italic&quot;, size = 12))
-</code></pre>
+  scale_fill_manual( values = c("#00AFBB", "#E3B166","#A1A861"))+
+  scale_color_manual(values = c("red", "black")) + facet_grid(~ supp)+
+  labs(x = "Doses", y ="Toothe Length", fill = "Doses", color="Supplement delivery",
+    title = "Tooth length \n by dose amount",
+  caption = "Plot tooth length ('len') by the dose amount ('dose'), \n grouped by supplement delivery method ('supp')") +
+  theme(plot.caption = element_text(color = "darkblue", face = "italic", size = 12))
+```
 
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   
-   <section class='' data-state=''>
-    <h4>Box plot - plot</h4>
+***
+#### Box plot - plot
 
-<pre><code class="r">mpt
-</code></pre>
 
-<p><img src="assets/fig/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4"></p>
+```r
+mpt
+```
 
-<p></br></p>
+![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4-1.png)
 
-<h4>Thanks for watching. Regards.</h4>
+</br>
 
-<h5>Idriss .S</h5>
-
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   
-</section>
-    </div>
-  </div>
-</body>
-  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
-  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
-  <script>
-  // Full list of configuration options available here:
-  // https://github.com/hakimel/reveal.js#configuration
-  Reveal.initialize({
-    controls: true,
-    progress: true,
-    history: true,
-    center: true,
-    theme: Reveal.getQueryHash().theme || 'moon', 
-    transition: Reveal.getQueryHash().transition || 'cube', 
-    dependencies: [
-    // Cross-browser shim that fully implements classList -
-    // https://github.com/eligrey/classList.js/
-      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
-      // Zoom in and out with Alt+click
-      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-      // Speaker notes
-      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-      // Remote control your reveal.js presentation using a touch device
-      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-      ]
-  });
-  </script>  
-<!-- LOAD HIGHLIGHTER JS FILES -->
-<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<!-- DONE LOADING HIGHLIGHTER JS FILES -->
- 
-
-</html>
+#### Thanks for watching. Regards.
+##### Idriss .S
