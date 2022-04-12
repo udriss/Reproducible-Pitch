@@ -56,14 +56,17 @@ str(ToothGrowth)
 library(tidyr)
 library(rstatix)
 ToothGrowth %>% sample_n_by(dose, size = 3)
+```
+
+***
+#### Data structure - 3
+```{r}
 # Quick summary of the data
 summary(ToothGrowth)
 # Exploration of ToothGrowth$dose and ToothGrowth$len, since we know exactly what ToothGrowth$supp contains
 unique(ToothGrowth$dose)
 unique(ToothGrowth$len)
 ```
-
-***
 
 #### Box plot - code
 
